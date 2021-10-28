@@ -1,6 +1,7 @@
 package ua.univer.lesson03.recursion;
 
 public class Program {
+    private Program(){}
     // n! = n * (n-1)!
     public static int fact(int n){
         if(n == 0 || n == 1) return 1;
