@@ -1,64 +1,93 @@
 package ua.univer.lesson04;
-class Box{
+
+import java.util.Arrays;
+
+class Box {
     int x;
     int y;
 }
+
 public class Program {
-    public static void swap(int x, int y){
+    public static void swap(int x, int y) {
         int temp = x;
         x = y;
         y = temp;
         System.out.println("After swap x in swap= " + x);
         System.out.println("After swap y in swap= " + y);
     }
-    public static void swap(int[] arr){
+
+    public static void swap(int[] arr) {
         int temp = arr[0];
         arr[0] = arr[1];
         arr[1] = temp;
     }
-    public static void swap(int[][] matrix){
+
+    public static void swap(int[][] matrix) {
         int[] temp = matrix[0];
         matrix[0] = matrix[1];
         matrix[1] = temp;
 
     }
-    public static void swap(int[][][] matrix){
+
+    public static void swap(int[][][] matrix) {
         int[][] temp = matrix[0];
         matrix[0] = matrix[1];
         matrix[1] = temp;
 
     }
-    public static void swap(Box box){
+
+    public static void swap(Box box) {
         int temp = box.x;
         box.x = box.y;
         box.y = temp;
     }
 
-    public static int[] getSwapMas(int[] arr){
+    public static int[] getSwapMas(int[] arr) {
         int[] tempMas = new int[arr.length];
         tempMas[0] = arr[1];
         tempMas[1] = arr[0];
         return tempMas;
     }
-    public static void printMatrix(int [][] matrix){
+
+    public static void printMatrix(int[][] matrix) {
         System.out.println("*****************");
         System.out.println(matrix.length);
         System.out.println(matrix[0].length);
         System.out.println(matrix[1].length);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j]+"\t");
+                if (i == j)
+                    System.out.print(matrix[i][j] + "\t");
+                else
+                    System.out.print("*\t");
             }
             System.out.println();
         }
     }
+
+    private static void swap(int[] arr, int j) {
+        if (arr[j] < arr[j + 1]) {
+            int t = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = t;
+        }
+    }
+
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                swap(arr, j);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int x = 1;
         int y = 2;
         swap(x, y);
         System.out.println("After swap x in main= " + x);
         System.out.println("After swap y in main= " + y);
-        int [] arr = new int[2];
+        int[] arr = new int[2];
         arr[0] = x;
         arr[1] = y;
 
@@ -69,7 +98,7 @@ public class Program {
 
         int[] arrSwap = getSwapMas(arr);
 
-        int [][] matrix = new int [2][3];
+        int[][] matrix = new int[2][3];
         matrix[0][0] = 11;
         matrix[0][1] = 12;
         matrix[0][2] = 13;
@@ -98,5 +127,10 @@ public class Program {
         swap(box2);
         System.out.println("After swap box1.x=" + box2.x);
         System.out.println("After swap box1.y=" + box2.y);
+
+        int[] arr3 = {11, 2, 3, 4, 5, 5};
+
+        Arrays.sort(arr3);
+        System.out.println(Arrays.toString(arr3));
     }
 }
