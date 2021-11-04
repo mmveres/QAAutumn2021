@@ -1,5 +1,7 @@
 package ua.univer.lesson05;
 
+import java.util.Arrays;
+
 public class Program {
     public static void main(String[] args) {
         String str = "mama mila ramu ramu mila mama mila mama mama mila ramu ramu mila mama mila mama";
@@ -31,5 +33,18 @@ public class Program {
         String d_str = "12,345";
      //   System.out.println(Double.parseDouble(d_str));
         System.out.println(Double.parseDouble(d_str.replace(',','.')));
+
+        String fio = "Ivanov, Ivan, Ivanovich";
+        String f = fio.substring(0,6);
+        String [] elems = fio.split(", ");
+        System.out.println(Arrays.toString(elems));
+        System.out.println("familia :"+elems[0]);
+        StringBuilder sb = new StringBuilder(100);
+        for (int i = 0; i < str.length(); i++) {
+            sb.append(str.charAt(i));
+            System.out.println(sb.length()+"/"+sb.capacity());
+        }
+        String str_from_sb = sb.toString();
+
     }
 }
