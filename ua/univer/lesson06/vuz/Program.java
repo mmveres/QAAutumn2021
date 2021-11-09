@@ -11,10 +11,14 @@ public class Program {
         Student.setFaculty("Java_From_Epam");
         studentList.print();
 
+        System.out.println(studentList);
+
         int age = studentList.getMaxAgeStudent();
         System.out.println(age);
 
         Student st = studentList.getStudentWithMaxAge();
         System.out.println(st);
+
+
     }
 }

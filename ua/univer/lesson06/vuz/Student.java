@@ -4,6 +4,7 @@ public class Student {
     private static String faculty = "IT";
     private String name;
     private int age;
+    private Address address;
 
     public Student(String name, int age) {
         this.name = name;
@@ -55,6 +56,7 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", faculty = " + faculty +
+                ", address = " + address.toString() +
                 '}';
     }
 }

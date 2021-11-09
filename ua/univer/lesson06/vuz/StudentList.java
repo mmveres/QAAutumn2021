@@ -1,8 +1,11 @@
 package ua.univer.lesson06.vuz;
 
+import java.util.Arrays;
+
 public class StudentList {
     private Student [] students;
     private int count;
+
 
     public StudentList(int n){
         students = new Student[n];
@@ -57,12 +60,26 @@ public class StudentList {
             }
         }
 
-        return max_age_student;
+        return
+                max_age_student;
     }
 
     public void print(){
-        for (int i = 0; i < students.length; i++) {
-            System.out.println(students[i]);
+        for (int i = 0;
+             i < students.length;
+             i++) {
+            System.out.println(
+                    students[i]
+            );
         }
+    }
+
+    @Override
+    public String toString() {
+
+        return "StudentList{" +
+                "students=" + Arrays.toString(students) +
+                ", count=" + count +
+                '}';
     }
 }

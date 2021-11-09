@@ -9,7 +9,8 @@ public class Cat {
 
     public Cat(String name, int age, double weight) {
         this.name = name;
-        this.setAge(age);
+        this.age = validate_age(age);
+        this.age = age;
         this.setWeight(weight);
         Cat.id++;
         this.current_id = Cat.id;
@@ -40,9 +41,13 @@ public class Cat {
     }
 
     public void setAge(int age) {
-        if (age <= 0 || age > 25)
+        this.age = validate_age(age);
+    }
+
+    private int validate_age(int age){
+        if (age <= 0 || age > 30)
             throw new IllegalArgumentException();
-        this.age = age;
+        return age;
     }
 
     public double getWeight() {
