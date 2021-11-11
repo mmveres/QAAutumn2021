@@ -22,6 +22,8 @@ public class Doctor extends Human{
         this.licence = licence;
     }
 
+
+
     @Override
     public String toString() {
         return "Doctor{" +

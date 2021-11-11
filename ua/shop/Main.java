@@ -1,4 +1,4 @@
-package ua.univer;
+package ua.shop;
 
 import java.util.Scanner;
 

@@ -3,14 +3,17 @@ package ua.univer.lesson07;
 import java.util.Arrays;
 
 public class Student extends Human {
-
     private int group;
     private int[] marks;
-
     public Student(String name, int age, int group) {
         super(name, age);
         this.group = group;
         this.marks = null;
+    }
+    public Student(String name, int age, int group, int[] marks) {
+        super(name, age);
+        this.group = group;
+        this.marks = marks;
     }
 
     public void study(){

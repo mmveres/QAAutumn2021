@@ -1,6 +1,6 @@
 package ua.univer.lesson07;
 
-public class Human {
+public abstract class Human {
     private String name;
     private int age;
 
@@ -34,7 +34,7 @@ public class Human {
         if (age< 0) throw new IllegalArgumentException();
         this.age = age;
     }
-
+   // public abstract void show();
     @Override
     public String toString() {
         return

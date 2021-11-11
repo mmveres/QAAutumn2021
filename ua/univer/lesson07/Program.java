@@ -6,10 +6,12 @@ public class Program {
             Doctor doc1 = new Doctor("Haus",50,6);
             Fighter f1 = new Fighter("Conan",30,100,90);
 
-            Human[] humans = new Human[3];
+            Human[] humans = new Human[5];
             humans[0] = st1;
             humans[1] = doc1;
             humans[2] = f1;
+            humans[3] = new Doctor("Doc",40,7);
+     //       humans[4] = new Human("Anonim",0);
             for (Human h: humans) {
                 System.out.println(h);
 
