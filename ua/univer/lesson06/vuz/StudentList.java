@@ -11,22 +11,16 @@ public class StudentList {
         students = new Student[n];
         count = 0;
     }
+    public StudentList(Student [] students){
+        this.students = students;
+        count = students.length;
+    }
 
     public Student[] toArray(){
         return students;
     }
 
-    public void generate4Student(){
-        Student st1 = new Student();
-        Student st2 = new Student("Bob2");
-        Student st3 = new Student("Bob3", 22);
-        Student st4 = new Student("Bob4", 23);
-        students[0] = st1;
-        students[1] = st2;
-        students[2] = st3;
-        students[3] = st4;
-        count = 4;
-    }
+
     public boolean add(Student st){
         if(count < students.length) {
             students[count] = st;

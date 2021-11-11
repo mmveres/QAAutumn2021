@@ -4,8 +4,8 @@ public class Program {
     public static void main(String[] args) {
         Student.setFaculty("JAVA_IT");
 
-        StudentList studentList = new StudentList(4);
-        studentList.generate4Student();
+        StudentList studentList = new StudentList(StudentUtil.generate4Student());
+
 
         studentList.print();
         Student.setFaculty("Java_From_Epam");

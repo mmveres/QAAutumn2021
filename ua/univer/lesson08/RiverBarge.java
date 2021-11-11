@@ -1,6 +1,6 @@
 package ua.univer.lesson08;
 
-public class RiverBarge extends Vehicle implements CruiseAble{
+public class RiverBarge extends Vehicle {
     public RiverBarge(String name, int speed, int age, Point coord) {
         super(name, speed, age, coord);
     }
