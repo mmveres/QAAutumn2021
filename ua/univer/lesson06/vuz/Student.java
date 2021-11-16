@@ -1,6 +1,6 @@
 package ua.univer.lesson06.vuz;
 
-public class Student {
+public class Student implements AgeAble {
     private static String faculty = "IT";
     private String name;
     private int age;

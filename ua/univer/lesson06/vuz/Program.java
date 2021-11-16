@@ -4,7 +4,7 @@ public class Program {
     public static void main(String[] args) {
         Student.setFaculty("JAVA_IT");
 
-        StudentList studentList = new StudentList(StudentUtil.generate4Student());
+        StudentList<Student> studentList = new StudentList(StudentUtil.generate4Student());
 
 
         studentList.print();
@@ -16,7 +16,7 @@ public class Program {
         int age = studentList.getMaxAgeStudent();
         System.out.println(age);
 
-        Student st = studentList.getStudentWithMaxAge();
+        Student st =  studentList.getStudentWithMaxAge();
         System.out.println(st);
 
 
