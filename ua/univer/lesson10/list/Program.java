@@ -17,5 +17,6 @@ public class Program {
         Iterator<Car> iter = carList.iterator();
         while (iter.hasNext())
             System.out.println(iter.next());
+
     }
 }
