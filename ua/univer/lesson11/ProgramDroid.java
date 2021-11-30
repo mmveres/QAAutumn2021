@@ -13,5 +13,12 @@ public class ProgramDroid {
 
 
         System.out.println(droids.contains(new RepairDroid("R2")));
+
+        String s1 = new String("AAA");
+        String s2 = new String("AAA");
+        System.out.println(s1==s2);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.hashCode()+ " " + s2.hashCode());
+
     }
 }

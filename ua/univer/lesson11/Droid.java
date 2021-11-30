@@ -7,6 +7,7 @@ public class Droid {
     private int x;
     private int y;
 
+
     public Droid(String name) {
        this(name, 0, 0);
 
