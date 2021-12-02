@@ -1,7 +1,14 @@
 package ua.univer.lesson14;
 
-public class Army {
+import java.io.Serializable;
+import java.util.List;
+
+public class Army implements Serializable {
     private String name;
+    List<Droid> droids;
+
+    public Army() {
+    }
 
     public Army(String name) {
         this.name = name;

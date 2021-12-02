@@ -7,7 +7,7 @@ import java.util.List;
 public class Droid implements Serializable {
     private String name;
     private int health;
-    private Army army;
+    private transient Army army;
     List<String> weapons = new ArrayList<>();
     public Droid(){
 
@@ -53,7 +53,7 @@ public class Droid implements Serializable {
 
     @Override
     public String toString() {
-        return "Droid{" +
+        return "\nDroid{" +
                 "name='" + name + '\'' +
                 ", health=" + health +
                 ", army=" + army +
