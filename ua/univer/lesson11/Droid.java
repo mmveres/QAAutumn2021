@@ -13,6 +13,10 @@ public class Droid {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Droid(String name, int x, int y) {
         this.name = name;
         this.x = x;
@@ -39,4 +43,6 @@ public class Droid {
                 "hash='" + hashCode() + '\'' +
                 '}';
     }
+
+
 }
