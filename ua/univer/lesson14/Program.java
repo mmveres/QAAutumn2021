@@ -7,8 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ *
+ */
 
 public class Program {
+    /**
+     *
+     * @param args
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         List<Droid> droids = new ArrayList<>();
         Army armyA = new Army("A");

@@ -72,6 +72,12 @@ public class DroidUtil {
             }
         }
     }
+
+    /**
+     *
+     * @param droids
+     * @throws IOException
+     */
     public static void writeDroidsToTxtByAttribute(List<Droid> droids) throws IOException {
         try (FileWriter fw = new FileWriter("droid.txt")) {
             for (var droid : droids) {
