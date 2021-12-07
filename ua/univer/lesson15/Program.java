@@ -40,6 +40,6 @@ public class Program {
 
         Collections.sort(droidList, (o1,  o2) ->  o1.getHealth() - o2.getHealth());
 
-        Collections.sort(droidList, Comparator.comparingInt(Droid::getHealth));
+        Collections.sort(droidList, Comparator.comparingInt(Droid::getHealth).thenComparing(Droid::getName).reversed());
     }
 }
